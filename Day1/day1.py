@@ -11,13 +11,10 @@ with open("./day1input.txt", "r") as f:
         else:
             secArray.append(int(ele))
 
-    sumOfSection = []
+    sumOfSection = [sum(sec) for sec in arrayOfSections]
 
-    for sec in arrayOfSections:
-        sumOfSection.append(sum(sec))
-
-    sortedTop3 = sorted(sumOfSection, reverse=True)[:3]
+    sumOfTop3 = sum(sorted(sumOfSection, reverse=True)[:3])
 
     print("Your max number is " + str(max(sumOfSection)))
 
-    print(f"Here is your top 3 total: {sum(sortedTop3)}")
+    print(f"Here is your top 3 total: {sumOfTop3}")
