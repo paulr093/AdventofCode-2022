@@ -35,5 +35,4 @@ with open("./input.txt", "r") as f:
             print(ranges[key][0], ranges[key][1], "overlaps")
             overlaps += 1
 
-    # print(pairs)
     print(f"Pairs: {pairs}", f"Overlaps: {overlaps}")
